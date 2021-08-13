@@ -1,2 +1,38 @@
 @import 'bootstrap/dist/css/bootstrap';
 
+body {
+  background-color:#FFFFF8;;
+}
+.card {
+border-radius: 10%;
+}
+
+.card-title {
+  margin-top: 5%;
+}  
+
+em {
+  font-size: 11px;
+  color: gray;
+}
+
+a {
+  color: gray;
+}
+
+::-webkit-input-placeholder {
+  font-size: 13px;
+}
+::-moz-placeholder {
+  font-size: 13px;
+}
+:-ms-input-placeholder {
+  font-size: 13px;
+}
+::placeholder {
+  font-size: 13px;
+}
+
+.field_with_errors input{
+  border-color: red;
+}
