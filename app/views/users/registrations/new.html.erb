@@ -1,4 +1,3 @@
-
 <div class="row">
   <div class="col-12">
     <div class="card text-center mx-auto" style="width: 25rem;">
@@ -17,26 +16,25 @@
 
             <%# <br> %>
             <div class="field">
-              <%= f.label :last_name %><br />
-              <%= f.email_field :last_name, autofocus: true, autocomplete: "last-name" %>
+              <label>Last Name</label><br />
+              <%= f.text_field :last_name, autofocus: true, autocomplete: "last-name" %>
             </div>
 
             
             <div class="field">
-              <%= f.label :email %><br />
+              <label>Email</label><br />
               <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
             </div>
 
             
             <div class="field">
-              <%= f.label :password%>
-              <br>
+              <label>Password</label><br>
               <%= f.password_field :password, autocomplete: "new-password", placeholder: "*#{@minimum_password_length if @minimum_password_length} characters minimum" %>
             </div>
 
             
             <div class="field">
-              <%= f.label :password_confirmation %><br />
+              <label>Password</label><br />
               <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
             </div>
 
