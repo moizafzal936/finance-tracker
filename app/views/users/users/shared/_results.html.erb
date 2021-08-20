@@ -1,0 +1,18 @@
+<%= render 'shared/alert' %>
+
+<% if @stock %>
+  <div class="card card-header results-block">
+    <strong> Symbol: </strong> <%= @stock.ticker%>
+    <strong> Company: </strong> <%= @stock.name%>
+    <strong> Price: </strong> <%= @stock.last_price%>
+    <%if current_user.can_track_stock?(@stock.ticker) %>
+      <%= link_to 'Add', users_user_stocks_path(user: current_user, ticker: @stock.ticker),
+                        class: "btn btn-secondary", method: :post  %>
+    <% else %>
+      <span class= "badge badge-warning"> Already Tracking 
+       <%="10 Stocks" if !current_user.under_tracking_limit?%>
+       <%= "this Stock" if current_user.stock_already_tracked?(@stock.ticker)%>
+      </span>
+    <% end %>
+  </div>
+<% end %>

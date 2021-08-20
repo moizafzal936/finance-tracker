@@ -1,9 +1,10 @@
 @import 'bootstrap/dist/css/bootstrap';
 
+
 body {
-  background-color:#FFFFF8;;
+  background-color:#FFFFFF;;
 }
-.card {
+.card-signup {
 border-radius: 10%;
 margin-top: 5%;
 background-color: white;
@@ -37,4 +38,30 @@ a {
 
 .field_with_errors input{
   border-color: red;
+}
+
+.search-area {
+  padding-top: 50px;
+}       
+
+.no-right-padding {
+  padding-right: 0 !important;
+}
+
+.no-left-padding {
+  padding-left: 0 !important;
+}
+
+.results-block {
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.logout-btn {
+  margin-right: 5px;
+}
+
+.user-name {
+  margin-right: 4px;
+  margin-top: 6 px;
 }

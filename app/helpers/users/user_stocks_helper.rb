@@ -1,0 +1,2 @@
+module Users::UserStocksHelper
+end
