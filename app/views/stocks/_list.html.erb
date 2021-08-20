@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-sm-9">
+    <table class="table table-bordered table-hover table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Ticker</th>
+          <th scope="col">Company</th>
+          <th scope="col">Price</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @tracked_stocks.each do |stock| %>
+          <tr>
+            <th scope="row"><%= stock.ticker %></th>
+            <td><%= stock.name %></td>
+            <td><%= stock.last_price %></td>
+            <td><%= link_to "Remove", users_user_stock_path(stock), method: :delete, data: {confirm: "Are you sure to delete it!"},
+                                           class:"btn btn-sm btn-danger" %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

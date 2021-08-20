@@ -1,0 +1,11 @@
+ <%= render 'shared/alert' %>
+
+<% if @friends %>
+  <div class="card card-header results-block">
+    <strong>Email: </strong> <%= @friends %>
+    <strong>Name: </strong> <%= @friends %>
+    <strong>Price: </strong> <%= @friends %>
+    <%= link_to 'Follow friend?', '#',
+                            class: "btn btn-sm btn-success", method: :post %>
+  </div>
+<% end %> 
