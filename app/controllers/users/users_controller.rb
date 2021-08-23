@@ -1,11 +1,13 @@
 class Users::UsersController < ApplicationController
   def my_portfolio
-    #@user = current_user
+    @user = current_user
     @tracked_stocks = current_user.stocks
   end
 
   def friends
-    @friends = current_user.friends
+    #@friends = current_user.friends
+    @q = current_user.friends.ransack(params[:q])
+    @friends = @q.result(distinct: true)
   end
 
   def show

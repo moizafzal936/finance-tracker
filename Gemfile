@@ -25,6 +25,9 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
+#Use 'ransack' for efficient searching
+gem 'ransack'
+
 #Use IEX to Get Data for Finance
 gem 'iex-ruby-client'
 

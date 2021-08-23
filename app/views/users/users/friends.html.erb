@@ -1,23 +1,24 @@
 <h1>Friends List</h1>
 
 <div class="search-area">
-  <h3>Search Stocks</h3>
-  <%= form_tag search_friends_path, remote: true, method: :get do%>
+  <h3>Search Friends Stocks</h3>
+ <%= search_form_for @q, method: true, method: :get , url: search_friends_path do |f| %>
   
   <div class="form-group row">
 
     <div class="col-sm-9 no-right-padding">
-        <%= text_field_tag :friend, params[:friend], placeholder: "Stock ticker symbol", autofocus: true, class: "form-control form-control-lg" %>
+        <%= f.search_field :first_name_or_last_name_or_email_cont, class: "form-control" %>
     </div>
 
     <div class="col-sm-3 no-left-padding">
-      <%= button_tag type: :submit, class: "btn btn-success" do%>
+      <%= f.submit "Seaarch", class: "btn btn-success" do%>
       <i class="fa fa-search fa-2x"></i>
       <% end %>
     </div>
     <% end %>
   </div>
 </div>
+
 <div id="friends-results">
 
 </div>
